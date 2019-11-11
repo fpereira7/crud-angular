@@ -5,30 +5,31 @@
     <input type="text" class="form-control" #nome>
   </div>
 
-  <button type="button" class="btn btn-primary"
-    (click)="adicionar(nome.value); nome.value = ''">Adicionar</button>
+  <button type="button" class="btn btn-primary" (click)="adicionar(nome.value); nome.value = ''">Adicionar</button>
 
   <table class="table" style="margin-top: 20px">
     <thead>
       <tr>
-        <th>Código</th>
-        <th>Nome</th>
+        <th>Nº Contrato</th>
+        <th>Documento Contratante</th>
+        <th>IMEI</th>
+        <th>Nº Telefone</th>
+        <th>Modelo</th>
+        <th>Nº Nota Fiscal</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let cidade of cidades">
-        <td>{{ cidade.id }}</td>
+      <tr *ngFor="let contrato of contratos">
+        <td>{{ contrato.id }}</td>
+        <td>{{ contrato.contratante.documento }}</td>
+        <td>{{ contrato.contratante.celular[0].imei }}</td>
+        <td>{{ contrato.contratante.numeroTelefone }}</td>
+        <td>{{ contrato.contratante.celular[0].modelo }}</td>
+        <td>{{ contrato.contratante.celular[0].numeroNotaFiscal }}</td>
+        
         <td>
-          <div class="input-group">
-            <input type="text" class="form-control" [(ngModel)]="cidade.nome">
-            <span class="input-group-btn">
-              <button class="btn btn-primary" (click)="atualizar(cidade)">Atualizar</button>
-            </span>
-          </div>
-        </td>
-        <td>
-          <button class="btn btn-danger" (click)="excluir(cidade.id)">Excluir</button>
+          <button class="btn btn-success" (click)="excluir(cidade.id)">Exibir</button>
         </td>
       </tr>
     </tbody>

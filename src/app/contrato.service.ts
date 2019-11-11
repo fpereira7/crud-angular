@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class CidadeService {
+export class ContratoService {
 
   constructor(private http: Http) { }
 
-  consultar(): Promise<any> {
-    return this.http.get('http://localhost:3000/cidades')
+  consultarContratos(): Promise<any> {
+    return this.http.get('http://localhost:8000/inmetrics/contratos')
       .toPromise()
       .then(response => response.json());
   }
