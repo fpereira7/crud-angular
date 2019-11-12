@@ -8,7 +8,7 @@ export class ContratoService {
   constructor(private http: Http) { }
 
   consultarContratos(): Promise<any> {
-    return this.http.get('http://localhost:8000/inmetrics/contratos')
+    return this.http.get('http://localhost:3000/contratos')
       .toPromise()
       .then(response => response.json());
   }

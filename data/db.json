@@ -1,36 +1,26 @@
 {
-  "cidades": [
-    {
-      "nome": "Uberlândia",
-      "id": 1
-    },
-    {
-      "nome": "São Paulo",
-      "id": 2
-    },
-    {
-      "nome": "Fortaleza",
-      "id": 3
-    },
-    {
-      "nome": "ASYNC",
-      "id": 7
-    },
-    {
-      "nome": "asaaaaa",
-      "id": 8
-    }
-  ],
-  "estados": [
-    {
-      "nome": "Rio de Janeiro",
+  "contratos": [ {
+  "id": 5,
+  "dataVencimento": "11/10/2019",
+  "dataAbertura": "12/10/2019",
+  "cotacaoExpirada": true,
+  "contratante": {
       "id": 1,
-      "cidades": [
-        {
-          "id": 1,
-          "nome": "teste"
-        }
+      "documento": "RG 1809060507",
+      "idade": 25,
+      "numeroTelefone": "21 9999-8888",
+      "quantidadeParcelas": 3,
+      "celular": [
+          {
+              "id": 3,
+              "imei": "012345",
+              "modelo": "Samsung S10",
+              "valor": 500,
+              "numeroNotaFiscal": 123
+          }
       ]
-    }
-  ]
+  },
+  "valorContrato": 500
+  }
+]
 }
