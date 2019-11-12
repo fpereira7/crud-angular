@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ContratoService } from './contrato.service';
+import { ContratoService } from './shared/services/contrato.service';
+import { ModalComponent } from './shared/components/modal/modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

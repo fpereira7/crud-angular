@@ -21,6 +21,28 @@
       ]
   },
   "valorContrato": 500
+  }, {
+  "id": 6,
+  "dataVencimento": "11/10/2019",
+  "dataAbertura": "12/10/2019",
+  "cotacaoExpirada": true,
+  "contratante": {
+      "id": 1,
+      "documento": "RG 1809060507",
+      "idade": 25,
+      "numeroTelefone": "21 9999-8888",
+      "quantidadeParcelas": 3,
+      "celular": [
+          {
+              "id": 3,
+              "imei": "012345",
+              "modelo": "Samsung S10",
+              "valor": 500,
+              "numeroNotaFiscal": 123
+          }
+      ]
+  },
+  "valorContrato": 500
   }
 ]
 }

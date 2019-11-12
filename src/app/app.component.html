@@ -1,13 +1,8 @@
 <div class="container">
 
-  <div class="form-group">
-    <label>Nome</label>
-    <input type="text" class="form-control" #nome>
-  </div>
+<h2 style="text-align: center;">Simular contrato</h2>
 
-  <button type="button" class="btn btn-primary" (click)="adicionar(nome.value); nome.value = ''">Adicionar</button>
-
-  <table class="table" style="margin-top: 20px">
+  <table class="table" style="margin-top: 60px">
     <thead>
       <tr>
         <th>Nº Contrato</th>
@@ -27,12 +22,16 @@
         <td>{{ contrato.contratante.numeroTelefone }}</td>
         <td>{{ contrato.contratante.celular[0].modelo }}</td>
         <td>{{ contrato.contratante.celular[0].numeroNotaFiscal }}</td>
-        
+
         <td>
-          <button class="btn btn-success" (click)="excluir(cidade.id)">Exibir</button>
+          <button type="button" class="btn btn-success" (click)="exibir(contrato.id)">Exibir</button>
         </td>
       </tr>
     </tbody>
   </table>
 
 </div>
+
+<app-modal [open]="openModal" title="Detalhes" (onClose)="onCloseModal()">
+{{ contrato | json }}
+</app-modal>
